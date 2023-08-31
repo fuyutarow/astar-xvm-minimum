@@ -1,0 +1,22 @@
+[package]
+authors = ["fuyutarow"]
+edition = "2021"
+name = "xvm-call"
+version = "0.1.0"
+
+[dependencies]
+ethabi = {git = "https://github.com/akru/ethabi", default-features = false}
+hex-literal = "0.3"
+ink = {version = "4.3.0", default-features = false}
+scale = {package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"]}
+scale-info = {version = "2", default-features = false, features = ["derive"], optional = true}
+sp-std = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39", default-features = false}
+xvm-environment = {git = "https://github.com/AstarNetwork/ink-xvm-sdk", subdir = "lib/xvm-environment", default-features = false}
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+ink-as-dependency = []
+std = ["ink/std", "scale/std", "scale-info/std", "xvm-environment/std"]
