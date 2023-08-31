@@ -1,5 +1,6 @@
 cache/
 artifacts/build-info/
+package-lock.json
 package-pnpm.lock
 pnpm-lock.yaml
 bun.lockb

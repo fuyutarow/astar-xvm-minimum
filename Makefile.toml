@@ -3,7 +3,7 @@ default_to_workspace = false
 
 [tasks."open"]
 script = '''
-open "https://shibuya.subscan.io/extrinsic/0xf1c3805ca70e2e46f9b73f89b32dee0dc644162a993746347fa9f7e1f16a56b3"
+open "https://shibuya.subscan.io/extrinsic/"
 '''
 
 [tasks."build:sol"]

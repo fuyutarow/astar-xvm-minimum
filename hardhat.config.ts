@@ -1,5 +1,4 @@
 import { HardhatUserConfig, task } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-generate-function-selectors";
 import * as dotenv from "dotenv";
 
@@ -16,6 +15,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const PRIVATE_KEY = process.env.PRIVATE_KEY !== undefined
   ? process.env.PRIVATE_KEY
   : "";
+
+console.log(PRIVATE_KEY);
 
 const config: HardhatUserConfig = {
   solidity: "0.8.19",
